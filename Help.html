@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Help - Support Center</title>
+    <!-- Spotify uses Google Fonts; we'll use a similar font. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #b3b3b3;
+        }
+
+        header {
+            background-color: #1db954;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #282828;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #1db954;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-bottom: 2px solid #1db954;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .question:hover {
+            background-color: #444;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #404040;
+            border-radius: 5px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        img {
+            border: 2px solid #1db954;
+            border-radius: 50%;
+            width: 150px;
+            animation: move 4s ease-out infinite;
+            position: relative;
+        }
+
+        .search input {
+            width: 400px;
+            height: 40px;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            margin-top: 20px;
+            outline: none;
+        }
+
+        .search input::placeholder {
+            color: #b3b3b3;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 150px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        .bot {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spotify Help</h1>
+    </header>
+
+    <section>
+        <h2>Support Center</h2>
+
+        <p>Welcome to the Spotify Support Center! Here you can find answers to common questions about our service. If you need further assistance, feel free to chat with us or visit our community.</p>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('q1')">How do I reset my password?</div>
+            <div class="answer" id="q1">To reset your password, go to the login page and click on "Forgot your password?" Follow the instructions to reset it via email.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('q2')">How can I update my payment method?</div>
+            <div class="answer" id="q2">You can update your payment method by going to your account settings and selecting "Payment methods". Choose the method you want to update and follow the prompts.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('q3')">How do I cancel my subscription?</div>
+            <div class="answer" id="q3">To cancel your subscription, log into your account, go to "Subscription" settings, and click "Cancel Subscription". Follow the steps to confirm.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('q4')">What are the available subscription plans?</div>
+            <div class="answer" id="q4">Spotify offers various subscription plans including Free, Premium Individual, Duo, Family, and Student plans. Each plan offers different features to suit your needs.</div>
+        </div>
+    </section>
+
+
+    <script>
+        function toggleAnswer(questionId) {
+            var answer = document.getElementById(questionId);
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
